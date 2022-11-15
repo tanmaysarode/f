@@ -128,6 +128,40 @@ public static void main(String[] args) {
 } 
 
 Exp4
+class Student
+{
+ int roll;
+ String name;
+ double marks;
+ Student(int R,String N,double M)
+ {
+ roll=R;
+ name=N;
+ marks=M;
+ }
+ Student(String N,double M,int R)
+ {
+ roll=R;
+ name=N;
+ marks=M;
+ }
+ void display()
+ {
+ System.out.println("\n\t"+roll+"\t"+name+"\t"+marks);
+ }
+}
+public class constructorOverloading {
+ public static void main(String[] args) {
+ // TODO Auto-generated method stub
+ Student s1=new Student(1,"ShubhamD",99);
+ Student s2=new Student(2,"Abhishek",99);
+ System.out.println("\n\tRoll\tName\tMarks");
+ s1.display();
+ s2.display();
+ }
+}
+
+Exp5
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -154,4 +188,68 @@ for(int i=0;i<n;i++)
 System.out.println(Names[i]);
 }
 }
+}
+
+Exp5B
+import java.util.*;
+public class Sortingname {
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+int n=4;
+String Names[]= {"Raj","Aaditya","Geeta","Riya"};
+Arrays.sort(Names);
+System.out.println("The names in alphabetical order are:");
+for(int i=0;i<n;i++)
+{
+System.out.println(Names[i]);
+}
+}
+}
+
+Exp6
+package javaexp6; 
+import java.util.Scanner; 
+public class AddMatrix { 
+public static void main(String[] args) { 
+ // TODO Auto-generated method stub
+ int row,col,i,j; 
+ Scanner in=new Scanner(System.in); 
+ System.out.println("Enter the number of rows"); 
+ row=in.nextInt(); 
+ System.out.println("Enter the number of cloumns"); 
+ col=in.nextInt(); 
+ int mat1[][]=new int[row][col]; 
+ int mat2[][]=new int[row][col]; 
+ int res[][]=new int[row][col]; 
+ System.out.println("Enter the element of matrix 1"); 
+ for(i=0;i<col;i++) 
+ { 
+ for(j=0;j<col;j++){ 
+ mat1[i][j]=in.nextInt(); 
+ } 
+ System.out.println(); 
+ } 
+ System.out.println("Enter the element of matrix 2"); 
+ for(i=0;i<row;i++) 
+ { 
+ for(j=0;j<col;j++){ 
+ mat2[i][j]=in.nextInt(); 
+ } 
+ System.out.println(); 
+ } 
+ for(i=0;i<col;i++){ 
+ for(j=0;j<col;j++){ 
+ res[i][j]=mat1[i][j] + mat2[i][j]; 
+ } 
+ System.out.println("Sum of Matrices"); 
+ } 
+ for(i=0;i<row;i++) 
+ { 
+ for(j=0;j<col;j++){ 
+ System.out.println(res[i][j]+"\t"); 
+ } 
+ System.out.println(); 
+ } 
+ 
+ } 
 }
